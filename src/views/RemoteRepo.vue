@@ -48,7 +48,7 @@
     methods: {
       fetchData() {
         axios
-          .get('http://172.31.65.60:9098/remote_repo')
+          .get('http://http://127.0.0.1/:9098/remote_repo')
           .then((response) => {
             this.data = response.data;
             this.dataCount = response.data.length;

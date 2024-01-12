@@ -1,7 +1,7 @@
 <template>
     <div>
       <button @click="sendGetRequest">一键解锁</button>
-      <p>172.31.65.60机器crontab已每十分钟解锁一次，此页面可快捷解锁全部被锁用户</p>
+      <p>http://127.0.0.1/机器crontab已每十分钟解锁一次，此页面可快捷解锁全部被锁用户</p>
       <p>被锁列表</p>
       <table class="table" id="table">
         <thead>
@@ -57,7 +57,7 @@
       fetchData() {
         this.isLoading = true; // 开始请求数据，显示加载中状态
         axios
-          .get('http://172.31.65.60:9098/artifacts_lock_user')
+          .get('http://http://127.0.0.1/:9098/artifacts_lock_user')
           .then((response) => {
             this.depend_data = response.data;
             this.isLoading = false; // 请求成功，隐藏加载中状态
@@ -70,7 +70,7 @@
       fetchData2() {
         this.isLoading = true; // 开始请求数据，显示加载中状态
         axios
-          .get('http://172.31.65.60:9098/pub_artifacts_lock_user')
+          .get('http://http://127.0.0.1/:9098/pub_artifacts_lock_user')
           .then((response) => {
             this.artifacts_data = response.data;
             this.isLoading = false; // 请求成功，隐藏加载中状态
@@ -82,7 +82,7 @@
       },
       async sendGetRequest() {
         try {
-          const url = 'http://172.31.65.60:9098/unlock_all_user';
+          const url = 'http://http://127.0.0.1/:9098/unlock_all_user';
           const response = await axios.get(url);
           console.log('响应数据:', response.data);
           this.responseData = response.data;

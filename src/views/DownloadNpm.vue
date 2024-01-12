@@ -23,7 +23,7 @@
   
       const fetchData = () => {
         axios
-          .get("http://172.31.65.60:9098/npm")
+          .get("http://http://127.0.0.1/:9098/npm")
           .then((response) => {
             chartData.value = response.data;
             createCharts();

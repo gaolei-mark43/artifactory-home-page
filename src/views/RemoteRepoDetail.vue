@@ -41,7 +41,7 @@
     methods: {
       fetchData() {
         axios
-          .get('http://172.31.65.60:9098/repo/'+this.repoName)
+          .get('http://http://127.0.0.1/:9098/repo/'+this.repoName)
           .then((response) => {
             this.data = response.data;
           })

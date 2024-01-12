@@ -58,7 +58,7 @@ export default {
     const searchInput = reactive('pypi-repo');
 
     const fetchData = (searchValue) => {
-      const url = `http://172.31.65.60:9098/table/${searchValue}`;
+      const url = `http://http://127.0.0.1/:9098/table/${searchValue}`;
       responseData.loading = true;
       axios
         .get(url)

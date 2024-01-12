@@ -48,7 +48,7 @@ export default {
   methods: {
     fetchData() {
       axios
-        .get('http://172.31.65.60:9098/storageinfo')
+        .get('http://http://127.0.0.1/:9098/storageinfo')
         .then((response) => {
           this.data = response.data;
         })
